@@ -15,7 +15,7 @@ const Success = () => {
   }
   return (
     <StyledSuccess>
-      Your name {name.toUpperCase()} aged {age} has been added to student
+      Your name {name.toUpperCase()} aged {age} has been added to forestAR
       system. You may now exit.
     </StyledSuccess>
   );

@@ -26,7 +26,7 @@ const ActionProvider = ({
 }) => {
   const dispatch = useDispatch<AppDispatch>();
   const handleGotIt = () => {
-    const botMessage = createChatBotMessage("Enter your Name", {});
+    const botMessage = createChatBotMessage("Amazing! How do I call you?", {});
 
     setState((prev: any) => ({
       ...prev,
@@ -48,10 +48,10 @@ const ActionProvider = ({
       }) => {
         let botMessage;
         if (
-          prev.messages[prev.messages.length - 2].message === "Enter your Name"
+          prev.messages[prev.messages.length - 2].message === "Amazing! How do I call you?"
         ) {
           dispatch(addName(prev.messages[prev.messages.length - 1].message));
-          botMessage = createChatBotMessage("Enter your Age", {
+          botMessage = createChatBotMessage("How old are you? Select from the dropdown", {
             widget: "ageDropdown",
           });
           return {

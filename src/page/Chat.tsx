@@ -75,9 +75,9 @@ const Chat = () => {
   return (
     <StyledChat>
       <div className="intro">
-        <h1>Enter into Student Info System</h1>
+        <h1>Select Your Trail with ForeStar ChatBot </h1>
         <button onClick={() => setIsOpened((prev) => !prev)}>
-          Enroll Now!
+          Select Now!
         </button>
       </div>
       {isOpened && (

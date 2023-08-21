@@ -6,11 +6,12 @@ import IConfig from "react-chatbot-kit/build/src/interfaces/IConfig";
 import chatGPT from "/chatgpt.svg";
 
 const config: IConfig = {
-  botName: "Student Info System Bot",
+  botName: "ForestAR Trail Selection ",
   initialMessages: [
-    createChatBotMessage(`Hello, Welcome to student info system!`, {
-      widget: "gotIt",
-    }),
+    createChatBotMessage(`Hello👋`, {}), 
+    createChatBotMessage("I am Star 🦊, your assistant in ForeStAR 🌲", {}),
+    createChatBotMessage("Now, we will select a trail customised just for your needs 👣", {widget: "gotIt",}),
+    
   ],
   customStyles: {
     botMessageBox: {
@@ -32,6 +33,15 @@ const config: IConfig = {
       widgetName: "ageDropdown",
       widgetFunc: (props: any) => <AgeDropdown {...props} />,
     },
+    {
+      widgetName: "trailGoalOptions",
+      widgetFunc: (props: any) => (
+        <div>
+          <button onClick={() => props.actions.handleUserInput("Educational")}>Educational</button>
+          <button onClick={() => props.actions.handleUserInput("Meditative")}>Meditative</button>
+        </div>
+      ),
+    }
   ] as IWidget[],
 };
 
