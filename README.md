@@ -1,18 +1,3 @@
-<div align="center">
-
-# [Chatbot using React Chatbot Kit](https://Chatbot-using-React-Chatbot-Kit.vercel.app/)
-
-![](https://raw.githubusercontent.com/itsme-Subid/Chatbot-using-React-Chatbot-Kit/master/preview.webp)
-![](https://img.shields.io/github/languages/top/itsme-Subid/Chatbot-using-React-Chatbot-Kit?style=for-the-badge)
-![](https://img.shields.io/github/languages/count/itsme-Subid/Chatbot-using-React-Chatbot-Kit?style=for-the-badge)
-![](https://img.shields.io/github/languages/code-size/itsme-Subid/Chatbot-using-React-Chatbot-Kit?style=for-the-badge)
-![](https://img.shields.io/github/repo-size/itsme-Subid/Chatbot-using-React-Chatbot-Kit?style=for-the-badge)
-![](https://img.shields.io/github/last-commit/itsme-Subid/Chatbot-using-React-Chatbot-Kit?style=for-the-badge)
-![](https://img.shields.io/github/commit-activity/w/itsme-Subid/Chatbot-using-React-Chatbot-Kit?style=for-the-badge)
-
-</div>
-
-Welcome to the Chatbot-using-React-Chatbot-Kit repository! Chatbot-using-React-Chatbot-Kit is a visually stunning website built using React.js, TypeScript, Redux and Styled-Components. The project is a front-end development endeavor and can be found on [GitHub](https://github.com/itsme-Subid/Chatbot-using-React-Chatbot-Kit).
 
 ## Getting Started
 
