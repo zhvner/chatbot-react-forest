@@ -8,7 +8,7 @@ To get started, you can simply clone this repository and install the dependencie
 To clone the repository, you will need to have git installed on your machine. Once you have those, you can use the following commands:
 
 ```bash
-git 
+git https://github.com/zhvner/chatbot-react-forest.git
 ```
 
 ### Running the Project
