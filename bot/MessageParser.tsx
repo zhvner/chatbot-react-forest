@@ -11,9 +11,11 @@ const MessageParser = ({
   };
 }) => {
   const parse = (message: string) => {
-    if (message.includes("got it!")) {
+    const lowerCaseMessage = message.toLowerCase() 
+
+    if (lowerCaseMessage.includes("got it!")) {
       actions.handleGotIt();
-    } else {
+    } else if (lowerCaseMessage.includes("got it!")) {
       actions.handleUserInput();
     }
   };

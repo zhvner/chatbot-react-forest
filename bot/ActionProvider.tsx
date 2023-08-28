@@ -2,7 +2,8 @@ import React from "react";
 import { IMessageOptions } from "react-chatbot-kit/build/src/interfaces/IMessages";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store";
-import { addAge, addName } from "../redux/features/messages-slice";
+
+
 
 const ActionProvider = ({
   createChatBotMessage,
@@ -50,20 +51,10 @@ const ActionProvider = ({
         if (
           prev.messages[prev.messages.length - 2].message === "Amazing! How do I call you?"
         ) {
-          dispatch(addName(prev.messages[prev.messages.length - 1].message));
+          //dispatch(addName(prev.messages[prev.messages.length - 1].message));
           botMessage = createChatBotMessage("How old are you? Select from the dropdown", {
             widget: "ageDropdown",
           });
-          return {
-            ...prev,
-            messages: [...prev.messages, botMessage],
-          };
-        } else if (age) {
-          dispatch(addAge(age.toString()));
-          botMessage = createChatBotMessage(
-            "Thank you. In 5 seconds, bot will exit.",
-            {}
-          );
           return {
             ...prev,
             messages: [...prev.messages, botMessage],
@@ -83,9 +74,43 @@ const ActionProvider = ({
             handleUserInput,
           },
         });
+        
       })}
     </div>
   );
 };
+
+// class ActionProvider {
+//   addMessageToState(message: any) {
+//     throw new Error("Method not implemented.");
+//   }
+//   setState: any;
+//   createChatBotMessage: any;
+//   state: {
+//     //genre: "",
+//     a: string;
+//   };
+//   constructor(createChatBotMessage: any, setStateFunc: any) {
+//     this.createChatBotMessage = createChatBotMessage;
+//     this.setState = setStateFunc;
+//     //this.state = state;
+//     this.state = {
+//       //genre: "",
+//       a: "Tom Clancy"
+//       //index: 0,
+//       //book: {}
+//     };
+//   }
+
+// const chooseForest = () => {
+//   const message = this.createChatBotMessage(
+//     "Common questions for Forest Bathing 101",
+//     {
+//       widget: "forestQuestions"
+//     }
+//   );
+//   this.addMessageToState(message);
+// };
+// }
 
 export default ActionProvider;

@@ -1,16 +1,18 @@
 import { createChatBotMessage } from "react-chatbot-kit";
-import GotIt from "./widgets/options/GotIt";
-import AgeDropdown from "./widgets/options/AgeDropdown";
+//import GotIt from "./widgets/options/GotIt";
+//import AgeDropdown from "./widgets/options/AgeDropdown";
 import IWidget from "react-chatbot-kit/build/src/interfaces/IWidget";
 import IConfig from "react-chatbot-kit/build/src/interfaces/IConfig";
 import chatGPT from "/chatgpt.svg";
+import Help from "./widgets/options/Help";
+import ForestQuestions from "./widgets/options/ForestQuestions.tsx";
 
 const config: IConfig = {
   botName: "ForestAR Trail Selection ",
   initialMessages: [
     createChatBotMessage(`Hello👋`, {}), 
     createChatBotMessage("I am Star 🦊, your assistant in ForeStAR 🌲", {}),
-    createChatBotMessage("Now, we will select a trail customised just for your needs 👣", {widget: "gotIt",}),
+    createChatBotMessage(" What do you want to 		learn?👣", {widget: "help",}),
     
   ],
   customStyles: {
@@ -26,22 +28,14 @@ const config: IConfig = {
   },
   widgets: [
     {
-      widgetName: "gotIt",
-      widgetFunc: (props: any) => <GotIt {...props} />,
+      widgetName: "help",
+      widgetFunc: (props) => <Help {...props} />, //1
     },
     {
-      widgetName: "ageDropdown",
-      widgetFunc: (props: any) => <AgeDropdown {...props} />,
-    },
-    {
-      widgetName: "trailGoalOptions",
-      widgetFunc: (props: any) => (
-        <div>
-          <button onClick={() => props.actions.handleUserInput("Educational")}>Educational</button>
-          <button onClick={() => props.actions.handleUserInput("Meditative")}>Meditative</button>
-        </div>
-      ),
+      widgetName: "forest",
+      widgetFunc: (props) => <ForestQuestions {...props} />, //1
     }
+
   ] as IWidget[],
 };
 

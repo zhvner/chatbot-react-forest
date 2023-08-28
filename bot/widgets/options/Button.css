@@ -1,0 +1,46 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+/* Button Styles */
+.this-button {
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+  /* Center text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Hover State */
+.this-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Your existing button styles... */
+
+/* Add space between HelpOption buttons and questions */
+.questions-container {
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .question-button {
+    margin-right: 10px; /* Add space between question buttons */
+  }
+  
+  .answer {
+    margin-top: 10px; /* Add space between question and answer */
+  }
+  
